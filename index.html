@@ -1,0 +1,143 @@
+<html ng-app="COSL">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slider.css">
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="scripts/angular.min.js"></script>
+
+	<script type="text/javascript" src="scripts/app.js"></script>
+	<script type="text/javascript" src="scripts/pageCtrl.js"></script>
+	<script type="text/javascript" src="scripts/sliderCtrl.js"></script>
+	<script type="text/javascript" src="scripts/directives/backToTop.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="scripts/bootstrap.min.js"></script>
+	<title>Central Ohio Sober Living (COSL)</title>
+</head>
+<body ng-controller="pageCtrl">
+	<!-- directive for scrolling back to the top of the page -->
+	<back-to-top></back-to-top>
+	
+	<nav id="topNav" class="navbar">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			 	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dropDownItems" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="dropDownItems">
+				<ul class="nav navbar-nav">
+					<li ng-repeat="link in links">
+						<button type="button" class="btn btn-success btn-lg navLinks" ng-click="scrollPageTo(link.text)">{{link.text}}</button>
+					</li>
+				</ul>
+			</div>
+		</nav><!-- /.container-fluid -->
+		
+	</div>
+
+	<div id="topContent">
+		<div id="imageGallery" ng-controller="sliderCtrl">
+			<div id="iGimgOverlay">
+				<ul>
+					<li><img ng-class="dotCircle_1" src="img/slider/images/image_1.png" /></li>
+					<li><img ng-class="dotCircle_2" src="img/slider/images/image_2.png" /></li>
+					<li><img ng-class="dotCircle_3" src="img/slider/images/image_3.png" /></li>
+					<li><img ng-class="dotCircle_4" src="img/slider/images/image_4.png" /></li>
+				</ul>
+			</div>
+			<div>
+				<ul id="dots">
+					<li><img src="img/slider/ui/dot.png" /></li>
+					<li><img src="img/slider/ui/dot.png" /></li>
+					<li><img src="img/slider/ui/dot.png" /></li>
+					<li><img src="img/slider/ui/dot.png" /></li>
+				</ul>
+			</div>
+			<div id="sliderControllers">
+				<div id="leftArrow" ng-click="moveLeft()"></div>
+				<div id="rightArrow" ng-click="moveRight()"></div>
+			</div>
+		</div>
+
+		<div id="messageText" class="container well">
+			<h2><span class="label label-success">Recovery Center Needs Your Help!</span></h2>
+			<p ng-repeat="message in messages">
+				{{message.text}}
+			</p>
+		</div>
+	</div>
+
+	<div class="container well content_1">
+		<h2><span class="label label-success">A Message From Our Director</span></h2>
+		<p>
+			Welcome and thank you for your interest in Central Ohio Sober Living! 
+   No matter how long or how severely a person has struggled with addiction, the decision to finally get help, and stay sober, is rarely easy. Whether you are looking for help for yourself or someone you love, I understand what you are experiencing, and I commend you for taking this essential step to pursue a sober environment and move toward a healthier tomorrow. 
+		</p>
+	   <p>
+	   	Central Ohio Sober Living is a special place, with a bright future. Our hope is to build our program to providing lifechanging (and, in many cases, life-saving) services to those who have been searching for an escape from the chains of chemical dependency. 
+	    The science of addiction treatment has changed considerably over the decades, and Central Ohio Sober Living has of course been working to further the AOD education of each staff member. Since inception in August 2015, we have been committed to the principles of the 12-Step model and to the philosophy that addiction recovery is an exercise of mind, body and spirit. 
+	   </p>
+	   <p>
+	   	Of course, principles, philosophies, and processes are only a framework for building an effective treatment program. The true transformative power of Central Ohio Sober Living comes from the men and women who come to work every day with the sole purpose of helping those who have chosen to heal with us. 
+	   Today, the Central Ohio Sober Living team is composed of talented professionals with a wide range of experience and expertise. Our clients benefit from working with men and women whose talents were honed through rigorous education as well as life experiences, and whose proficiency has been garnered through dedication to service. Most importantly, they are compassionate people who understand both the devastation of addiction and the promise of recovery – and who have dedicated their lives to using their insights and talents in service of others. 
+	   </p>
+		
+		<p>
+			When you enter Central Ohio Sober Living, you will work with our staff to craft a personalized course of treatment, and to take an active role in your own sobriety. Guided by our core principles and motivated by the power and promise of the 12 Steps, this client-provider collaboration can make a real and lasting difference in your life, too. 
+	   Ideally, the day you began treatment was your last day of using drugs or alcohol and the first day of a free and much more fulfilling life. We look forward to walking with you on your journey toward that happier and healthier future. 
+	   For specific details about any aspect of our program, please feel free to call us number	(614) 725-2005 or visit our website at <a href="www.centralohiosoberliving.com">www.centralohiosoberliving.com. </a>
+	   On behalf of the entire Central Ohio Sober Living team, I wish you all the best. 
+		</p>
+
+   
+	</div>
+	<div class="container well content_2">
+		<h2><span class="label label-success">Contact Us</span></h2>
+		<br>
+		<h3>Phone Number:</h3>
+		<h3>1-(614)-725-2005</h3>
+		<br>
+		<h4>Send a Message Below</h4>
+ 		<form ng-submit="register()">
+		<div class="form-group">
+			<label for="firstName">Enter your name</label>
+			<input type="text" class="form-control" id="firstName" placeholder="First Name" required ng-model="fName">
+		</div>
+	
+		<div class="form-group">
+			<label for="signupemail">Enter your login email</label>
+			<input type="email" class="form-control" id="signupemail" placeholder="Your Email" required ng-model="email">
+		</div>
+		
+		<textarea class="form-control" rows="3" placeholder="Enter Message"></textarea>
+		<br>
+		<button type="submit" class="btn btn-lg btn-success">Send</button>
+
+		<div ng-show="successSignUp" class="alert alert-success" role="alert">
+            <b>{{ successSignUp }}</b>
+        </div>
+        <div ng-show="errorMsg" class="alert alert-danger" role="alert">
+            {{ errorMsg }}
+        </div>
+	</form>
+	</div>
+	
+</body>
+</html>
